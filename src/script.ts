@@ -1,3 +1,4 @@
+import { Background } from "./actors/Background";
 import { Pacman } from "./actors/Pacman";
 import { Map } from "./actors/Map";
 import { FPSViewer } from "./actors/FPSViewer";
@@ -26,6 +27,7 @@ window.onload = () => {
   let cars: Car[] = [carA]; //, carB];
 
   let actors: Actor[] = [
+    new Background({ x: 0, y: 0 }),
     new FPSViewer({ x: 5, y: 100 }),
     ...cars,
     ...barriers,
