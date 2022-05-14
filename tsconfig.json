@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM"],
+    "incremental": true,
+    "target": "esnext",
+    "module": "esnext",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["vite/client", "node"]
+  },
+  "include": ["src/*", "types/*"]
+}

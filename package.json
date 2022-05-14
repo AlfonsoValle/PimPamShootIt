@@ -1,0 +1,22 @@
+{
+  "name": "pimpamshootit",
+  "version": "1.0.0",
+  "description": "Rusty Game about shooting things.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "tsc",
+    "preview": "vite preview --port 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.33"
+  }
+}
