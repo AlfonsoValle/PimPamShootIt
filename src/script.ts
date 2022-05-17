@@ -1,16 +1,16 @@
 import { Background } from "./actors/Background";
-import { Pacman } from "./actors/Pacman";
+//import { Pacman } from "./actors/Pacman";
 import { Map } from "./actors/Map";
 import { FPSViewer } from "./actors/FPSViewer";
 import { Actor } from "./actors/Actor";
-import { Car } from "./actors/Car";
-import { Barrier } from "./actors/Barrier";
+//import { Car } from "./actors/Car";
+//import { Barrier } from "./actors/Barrier";
 import { MAP_A, MAP_B } from "./utils/KeyboardMap";
 import { Dartboard } from "./actors/Dartboard";
-import {
-  Circuit,
-  createCircuit,
-} from "./state/CircuitManager";
+//import {
+//   Circuit,
+//   createCircuit,
+//  from "./state/CircuitManager";
 
 window.onload = () => {
   const canvas = document.getElementById(
@@ -20,12 +20,12 @@ window.onload = () => {
     "2d"
   ) as CanvasRenderingContext2D;
 
-  let carA = new Car({ x: 200, y: 200 }, MAP_A);
+  //let carA = new Car({ x: 200, y: 200 }, MAP_A);
   //let carB = new Car({ x: 300, y: 200 }, MAP_B);
 
-  createCircuit(carA);
-  let barriers: Barrier[] = [...Circuit.barriers];
-  let cars: Car[] = [carA]; //, carB];
+ // createCircuit(carA);
+ // let barriers: Barrier[] = [...Circuit.barriers];
+ // let cars: Car[] = [carA]; //, carB];
 
   let dartboard1 = new Dartboard();
   let dartboard2 = new Dartboard();
@@ -53,11 +53,11 @@ window.onload = () => {
   let actors: Actor[] = [
     new Background({ x: 0, y: 0 }),
     new FPSViewer({ x: 5, y: 100 }),
-    ...cars,
-    ...barriers,
+    //...cars,
+    //...barriers,
     ...dartboard,
-    Circuit,
-    new Pacman({ x: 100, y: 100 }),
+   // Circuit,
+    //new Pacman({ x: 100, y: 100 }),
     //new Dartboard(),
   ];
 

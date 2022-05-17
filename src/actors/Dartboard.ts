@@ -42,13 +42,13 @@ export class Dartboard extends Actor {
       x: Math.floor(Math.random() * 1800 + 100),
       y: Math.floor(Math.random() * 1100 + 100),
     },
-    maxSpeed = 300,
-    size = { w: 100, h: 100 }
+    maxSpeed = Math.floor(Math.random() * 400 + 500),
+    size = { w: 150, h: 150 }
   ) {
     super(initialPos);
     this.origin = { x: initialPos.x, y: initialPos.y };
     this.maxSpeed = maxSpeed;
-    this.dartboardSpeed = { x: maxSpeed, y: 0 };
+    this.dartboardSpeed = { x: maxSpeed, y: maxSpeed };
     this.dartboardSize = size;
     this.dartboardImage = new Image();
     this.dartboardImage.src = image;
@@ -69,18 +69,48 @@ export class Dartboard extends Actor {
     let newPosY =
       this.origin.y + this.dartboardSpeed.y * delta;
     if (
-      newPosY <= 1350 - this.dartboardSize.y &&
-      newPosY >= this.dartboardSize.y
+      newPosY <= 1350 - this.dartboardSize.h &&
+      newPosY >= this.dartboardSize.h
     ) {
       this.origin.y = newPosY;
     }
-    this.dartboardTimer += delta;
+    //this.dartboardTimer += delta;
+    //   let newPosY =
+    //     this.origin.y + this.dartboardSpeed.y * delta;
+    //   if (
+    //     newPosY <= 1350 - this.dartboardSize.y &&
+    //     newPosY >= this.dartboardSize.y
+    //   ) {
+    //     this.origin.y = newPosY;
+    //   }
+    //   this.dartboardTimer += delta;
 
-    if (this.dartboardTimer >= 0.1) {
-      this.xFrame = (this.xFrame + 1) % 6;
-      this.yFrame = (this.yFrame + 1) % 6;
-      this.dartboardTimer = 0;
+    //  if (Math.floor(Math.random() * 300) < 30) {
+    //     this.dartboardSpeed.x & this.dartboardSpeed.x;
+    //      (this.dartboardSpeed.x * -1) &
+    //       (this.dartboardSpeed.y * -1);
+
+    if (Math.floor(Math.random() * 900) < 10) {
+      this.dartboardSpeed.x = this.dartboardSpeed.x * -1;
     }
+    if (Math.floor(Math.random() * 900) < 10) {
+      this.dartboardSpeed.y = this.dartboardSpeed.y * -1;
+    }
+
+    // let newPosY =
+    //   this.origin.y + this.dartboardSpeed.y * delta;
+    // if (
+    //   newPosY <= 1350 - this.dartboardSize.y &&
+    //   newPosY >= this.dartboardSize.y
+    // ) {
+    //   this.origin.y = newPosY;
+    // }
+
+    // if (this.dartboardTimer >= 0.1) {
+    //   this.xFrame = (this.xFrame + 1) % 6;
+    //   this.yFrame = (this.yFrame + 1) % 6;
+    //   this.dartboardTimer = 0;
+    // }
   }
 
   draw(delta: number, ctx: CanvasRenderingContext2D) {
