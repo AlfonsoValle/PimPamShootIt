@@ -40,6 +40,12 @@ export class Barrier extends Actor {
     ) {
       this.touched = true;
     }
+
+
+
+
+
+    
   }
 
   draw(delta: number, ctx: CanvasRenderingContext2D): void {
