@@ -24,18 +24,18 @@ export class Pacman extends Actor {
     maxSpeed = 100
   ) {
     super(initialPos);
-    this.pacmanSize = 40;
-    this.mouthOpen = 30;
+    this.pacmanSize = 90;
+    //this.mouthOpen = 30;
     this.origin = { x: initialPos.x, y: initialPos.y };
-    this.color = color;
+    // this.color = color;
     this.maxSpeed = maxSpeed;
     this.speed = { x: maxSpeed, y: 0 };
     this.image = new Image();
     this.image.src = image;
-    this.sxParameters = [7, 6, 5, 4, 5, 6];
+    //this.sxParameters = [7, 6, 5, 4, 5, 6];
     this.timer = 0;
-    this.xFrame = 0;
-    this.yFrame = 5;
+    //this.xFrame = 0;
+    // this.yFrame = 5;
   }
 
   // add delta to update
@@ -44,7 +44,7 @@ export class Pacman extends Actor {
     // speed * delta
     let newPosX = this.origin.x + this.speed.x * delta;
     if (
-      newPosX <= 1024 - this.pacmanSize &&
+      newPosX <= 1000 - this.pacmanSize &&
       newPosX >= this.pacmanSize
     ) {
       this.origin.x = newPosX;
@@ -70,38 +70,36 @@ export class Pacman extends Actor {
     // ctx.fillRect(0, 0, this.pacmanSize, this.pacmanSize);
     ctx.drawImage(
       this.image,
-      32.5 * this.sxParameters[this.xFrame],
-      31 * this.yFrame,
-      25,
-      25,
-      0,
-      0,
+      // 32.5 * this.sxParameters[this.xFrame],
+      // 31 * this.yFrame,
+      // 25,
+      // 25,
+      // 0,
+      // 0,
       this.pacmanSize,
       this.pacmanSize
     );
   }
 
-  keyboard_event_down(key: string) {
-    switch (key) {
-      case "ArrowRight":
-        console.log("right");
-        this.speed.x = this.maxSpeed;
-        this.yFrame = 5;
-        break;
-      case "ArrowLeft":
-        console.log("left");
-        this.speed.x = -this.maxSpeed;
-        this.yFrame = 4;
-        break;
-      case "ArrowUp":
-        console.log("up");
-        break;
-      case "ArrowDown":
-        console.log("down");
-        break;
-      default:
-        console.log("not a valid key");
-        break;
-    }
-  }
+  // keyboard_event_down(key: string) {
+  //   switch (key) {
+  //     case "ArrowRight":
+  //       console.log("right");
+  //       this.speed.x = this.maxSpeed;
+  //       this.yFrame = 5;
+  //       break;
+  //     case "ArrowLeft":
+  //       console.log("left");
+  //       this.speed.x = -this.maxSpeed;
+  //       this.yFrame = 4;
+  //       break;
+  //     case "ArrowUp":
+  //       console.log("up");
+  //       break;
+  //     case "ArrowDown":
+  //       console.log("down");
+  //       break;
+  //     default:
+  //       console.log("not a valid key");
+  //       break;
 }
