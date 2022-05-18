@@ -1,24 +1,43 @@
 import { Background } from "./actors/Background";
-import { Pacman } from "./actors/Pacman";
 import { FPSViewer } from "./actors/FPSViewer";
-import { Car } from "./actors/Car";
-import { MAP_A } from "./utils/KeyboardMap";
-import { Circuit, createCircuit, } from "./state/CircuitManager";
+import { DartBoardTeam, } from "./state/DartBoardManager";
+//import { MAP_A, MAP_B } from "./utils/KeyboardMap";
 window.onload = () => {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
-    let carA = new Car({ x: 200, y: 200 }, MAP_A);
-    //let carB = new Car({ x: 300, y: 200 }, MAP_B);
-    createCircuit(carA);
-    let barriers = [...Circuit.barriers];
-    let cars = [carA]; //, carB];
+    // function clickDartboard(Xmouse: number, Ymouse: number) {
+    //
+    let dartboards = [
+        ...DartBoardTeam.dartboards,
+    ];
+    // let dartboard2 = new Dartboard();
+    // let dartboard3 = new Dartboard();
+    // let dartboard4 = new Dartboard();
+    // let dartboard5 = new Dartboard();
+    // let dartboard6 = new Dartboard();
+    // let dartboard7 = new Dartboard();
+    // let dartboard8 = new Dartboard();
+    // let dartboard9 = new Dartboard();
+    // let dartboard10 = new Dartboard();
+    // let dartboard: Dartboard[] = [
+    //   dartboard1,
+    //   dartboard2,
+    //   dartboard3,
+    //   dartboard4,
+    //   dartboard5,
+    //   dartboard6,
+    //   dartboard7,
+    //   dartboard8,
+    //   dartboard9,
+    //   dartboard10,
+    // ];
+    //console.log(xrandom, yrandom);
     let actors = [
         new Background({ x: 0, y: 0 }),
         new FPSViewer({ x: 5, y: 100 }),
-        ...cars,
-        ...barriers,
-        Circuit,
-        new Pacman({ x: 100, y: 100 }),
+        ...dartboards,
+        DartBoardTeam,
+        //new Dartboard(),
     ];
     let lastFrame = 0;
     const render = (time) => {
@@ -36,16 +55,22 @@ window.onload = () => {
         window.requestAnimationFrame(render);
     };
     window.requestAnimationFrame(render);
-    document.body.addEventListener("keydown", (e) => {
-        // console.log('Keydown', e);
-        actors.forEach((actor) => {
-            actor.keyboard_event_down(e.key);
-        });
-    });
-    document.body.addEventListener("keyup", (e) => {
-        // console.log('keyUp', e);
-        actors.forEach((actor) => {
-            actor.keyboard_event_up(e.key);
-        });
-    });
-};
+    canvas.addEventListener("mousedown", (e) => {
+        let Xmouse = e.offsetX * 2;
+        let Ymouse = e.offsetY * 2;
+        let dartboardOrigin = dartboards.forEach((e) => e.origin);
+        console.log(dartboardOrigin);
+        // console.log(Xmouse, Ymouse); //esto x 2 .
+        //console.log(dartboardOrigin.x, dartboardOrigin.y);
+        // const distance = Math.sqrt(
+        //   Math.pow(Xmouse - dartboardOrigin.x, 2) +
+        //     Math.pow(Ymouse - dartboardOrigin.y, 2)
+        // );
+        // if (distance < dartboard.widthandheight / 2) {
+        //   dartboards.forEach((e) => (e.pimpam = true));
+        //   console.log(dartboards.pimpam);
+        //   console.log(distance);
+    }
+    //}//);
+    );
+}; //};

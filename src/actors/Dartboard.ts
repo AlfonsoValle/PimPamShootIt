@@ -3,13 +3,14 @@ import { Point } from "../types/Point";
 import image from "../assets/dartboard.png";
 ("../assets/dartboardPIM.png");
 import image2 from "../assets/dartboardPIM.png";
-import { NumberLiteralType } from "typescript";
-const audioUrl = new URL(
-  "../assets/dartboardAccelerating.mp3",
-  import.meta.url
-);
+//import { NumberLiteralType } from "typescript";
+// const audioUrl = new URL(
+//   "../assets/dartboardAccelerating.mp3",
+//   import.meta.url
+// );
 
 export class Dartboard extends Actor {
+  notpimpam: boolean;
   pimpam: boolean;
   dartBoardRadius: number;
   widthandheight: number;
@@ -23,11 +24,12 @@ export class Dartboard extends Actor {
   origin: Point;
   xFrame: number;
   yFrame: number;
+
   //dartboardheight: number;
   // dartboardwidth: number;
-  dartboarderratic: any;
-  dartboardtick: any;
-  dartboardchangeAt: any;
+  // dartboarderratic: any;
+  // dartboardtick: any;
+  // dartboardchangeAt: any;
   //correctXY(): any;
   dartboardmove: any;
   dartboardSize: any;
@@ -41,8 +43,8 @@ export class Dartboard extends Actor {
       x: Math.floor(Math.random() * 1800 + 100),
       y: Math.floor(Math.random() * 1100 + 100),
     },
-    maxSpeed = Math.floor(Math.random() * 40 + 5),
-    widthandheight = Math.floor(Math.random() * 100 + 130),
+    maxSpeed = Math.floor(Math.random() * 400 + 300),
+    widthandheight = Math.floor(Math.random() * 100 + 100),
     size = { w: widthandheight, h: widthandheight }
   ) {
     super(initialPos);
@@ -60,7 +62,9 @@ export class Dartboard extends Actor {
     this.widthandheight = widthandheight;
     this.dartBoardRadius = 50;
     this.pimpam = false;
-    // this.newPosX = this.origin.x;
+    this.notpimpam = true;
+
+    //this.newPosX = this.origin.x;
     // this.newPosY = this.origin.y;
   }
 
@@ -82,10 +86,10 @@ export class Dartboard extends Actor {
       this.origin.y = newPosY;
     }
 
-    if (Math.floor(Math.random() * 900) < 10) {
+    if (Math.floor(Math.random() * 800) < 20) {
       this.dartboardSpeed.x = this.dartboardSpeed.x * -1;
     }
-    if (Math.floor(Math.random() * 900) < 10) {
+    if (Math.floor(Math.random() * 800) < 20) {
       this.dartboardSpeed.y = this.dartboardSpeed.y * -1;
     }
     if (this.pimpam === true) {
