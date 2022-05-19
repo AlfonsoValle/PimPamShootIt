@@ -16,21 +16,10 @@ window.onload = () => {
 		"2d"
 	) as CanvasRenderingContext2D;
 
-	let x = new Dartboard();
-	createDartBoardTeam(x);
-	let dartboards: Dartboard[] = [
-		...DartBoardTeam.dartboards,
-	];
-	let clicks = new Clicker();
-	let actors: Actor[] = [
-		new Background({ x: 0, y: 0 }),
-		new FPSViewer({ x: 30, y: 30 }),
-		clicks,
-		...dartboards,
-		DartBoardTeam,
-	];
-	clicks.increment(canvas);
-	clicks.hits = 0;
+	let game = createGame(canvas);
+	let actors = game.actors;
+	let clicks = game.clicks;
+	let dartboards = game.dartboards;
 	let lastFrame = 0;
 	const render = (time: number) => {
 		let delta = (time - lastFrame) / 1000;
@@ -44,7 +33,16 @@ window.onload = () => {
 			e.draw(delta, ctx);
 			ctx.restore();
 		});
-		window.requestAnimationFrame(render);
+		if (!clicks.gameover) {
+			window.requestAnimationFrame(render);
+		} else {
+			alert("Game Over!");
+			let game = createGame(canvas);
+			actors = game.actors;
+			clicks = game.clicks;
+			dartboards = game.dartboards;
+			window.requestAnimationFrame(render);
+		}
 	};
 
 	window.requestAnimationFrame(render);
@@ -67,4 +65,23 @@ window.onload = () => {
 			}
 		});
 	});
+};
+
+const createGame = (canvas: HTMLCanvasElement) => {
+	let x = new Dartboard();
+	createDartBoardTeam(x);
+	let dartboards: Dartboard[] = [
+		...DartBoardTeam.dartboards,
+	];
+	let clicks = new Clicker();
+	let actors: Actor[] = [
+		new Background({ x: 0, y: 0 }),
+		new FPSViewer({ x: 30, y: 30 }),
+		clicks,
+		...dartboards,
+		DartBoardTeam,
+	];
+	clicks.increment(canvas);
+	clicks.hits = 0;
+	return { actors, clicks, dartboards };
 };
