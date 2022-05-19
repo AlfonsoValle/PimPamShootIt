@@ -36,12 +36,21 @@ window.onload = () => {
 		if (!clicks.gameover) {
 			window.requestAnimationFrame(render);
 		} else {
-			alert("Game Over!");
+			alert(
+				`🎉 ¡Enhorabuena! 🎉 \n 🎯 Tuviste una Puntería del ${clicks.accuracy.toFixed(
+					1
+				)} % En ${
+					clicks.clicks
+				} Disparos 🎯 \n  🏆 Pulsa aceptar y supera tu Record 🏆`
+			);
+
 			let game = createGame(canvas);
 			actors = game.actors;
 			clicks = game.clicks;
 			dartboards = game.dartboards;
-			window.requestAnimationFrame(render);
+			setTimeout(() => {
+				window.requestAnimationFrame(render);
+			}, 300);
 		}
 	};
 
