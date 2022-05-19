@@ -43,8 +43,8 @@ export class Dartboard extends Actor {
       x: Math.floor(Math.random() * 1800 + 100),
       y: Math.floor(Math.random() * 1100 + 100),
     },
-    maxSpeed = Math.floor(Math.random() * 400 + 300),
-    widthandheight = Math.floor(Math.random() * 100 + 100),
+    maxSpeed = Math.floor(Math.random() * 400 + 350),
+    widthandheight = Math.floor(Math.random() * 100 + 150),
     size = { w: widthandheight, h: widthandheight }
   ) {
     super(initialPos);
@@ -86,10 +86,10 @@ export class Dartboard extends Actor {
       this.origin.y = newPosY;
     }
 
-    if (Math.floor(Math.random() * 800) < 20) {
+    if (Math.floor(Math.random() * 600) < 10) {
       this.dartboardSpeed.x = this.dartboardSpeed.x * -1;
     }
-    if (Math.floor(Math.random() * 800) < 20) {
+    if (Math.floor(Math.random() * 600) < 10) {
       this.dartboardSpeed.y = this.dartboardSpeed.y * -1;
     }
     if (this.pimpam === true) {

@@ -23,7 +23,12 @@ export class Clicker extends Actor {
       );
     }
 
-    ctx.font = "30px Montserrat";
+    ctx.beginPath();
+    ctx.fillStyle = "#C24E00";
+    ctx.fillRect(600, 45, 1000, 50);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.font = "bold 30px Montserrat ";
     ctx.fillStyle = "WHITE";
 
     ctx.fillText(
