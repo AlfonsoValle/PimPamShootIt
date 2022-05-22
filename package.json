@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "tsc",
-    "ghbuild":"vite build",
+    "ghbuild":"vite build --outDir docs --base=/PimPamShootIt",
     "preview": "vite preview --port 8080"
   },
   "keywords": [],
