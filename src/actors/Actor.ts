@@ -3,8 +3,6 @@ import { Point } from "../types/Point";
 export interface IActor {
 	position: Point;
 	update: (delta: number) => void;
-	keyboard_event_down: (key: string) => void;
-	keyboard_event_up: (key: string) => void;
 
 	draw: (
 		delta: number,
@@ -18,7 +16,5 @@ export class Actor implements IActor {
 		this.position = position;
 	}
 	update(delta: number) {}
-	keyboard_event_down(key: string) {}
-	keyboard_event_up(key: string) {}
 	draw(delta: number, ctx: CanvasRenderingContext2D) {}
 }

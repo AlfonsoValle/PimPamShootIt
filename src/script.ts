@@ -48,9 +48,7 @@ window.onload = () => {
 			actors = game.actors;
 			clicks = game.clicks;
 			dartboards = game.dartboards;
-			setTimeout(() => {
-				window.requestAnimationFrame(render);
-			}, 300);
+			window.requestAnimationFrame(render);
 		}
 	};
 
@@ -86,9 +84,10 @@ const createGame = (canvas: HTMLCanvasElement) => {
 	let actors: Actor[] = [
 		new Background({ x: 0, y: 0 }),
 		new FPSViewer({ x: 30, y: 30 }),
-		clicks,
+
 		...dartboards,
 		DartBoardTeam,
+		clicks,
 	];
 	clicks.increment(canvas);
 	clicks.hits = 0;

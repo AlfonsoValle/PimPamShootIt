@@ -2,7 +2,6 @@ import { Actor } from "./Actor";
 
 export class Clicker extends Actor {
 	clicks: number;
-	patata: any;
 	hits: number;
 	accuracy: number;
 	gameover: boolean;
@@ -12,14 +11,11 @@ export class Clicker extends Actor {
 		this.hits = 0;
 		this.accuracy = 0;
 		this.gameover = false;
-		this.patata = 78;
 	}
 	draw(delta: number, ctx: CanvasRenderingContext2D) {
 		this.accuracy = (this.hits / this.clicks) * 100;
 		if (this.clicks === 0) this.accuracy = 100;
-		if (this.hits === 10) {
-			this.gameover = true;
-		}
+
 		ctx.beginPath();
 		ctx.fillStyle = "#C24E00";
 		ctx.fillRect(600, 45, 1000, 50);
@@ -27,7 +23,7 @@ export class Clicker extends Actor {
 		ctx.closePath();
 		ctx.font = "bold 30px Montserrat ";
 		ctx.fillStyle = "WHITE";
-		let patata = ctx.fillText(
+		ctx.fillText(
 			` 🎯 TOTAL DE TIROS: ${
 				this.clicks
 			}  🔥🔥🔥🔥  TU PUNTERIA ES: ${this.accuracy.toFixed(
@@ -36,6 +32,9 @@ export class Clicker extends Actor {
 			this.position.x,
 			this.position.y
 		);
+		if (this.hits === 10) {
+			this.gameover = true;
+		}
 	}
 
 	increment(o: any) {
