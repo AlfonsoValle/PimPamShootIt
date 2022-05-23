@@ -18,33 +18,37 @@ Quería implementar la detección de clics en pantalla para poder disparar usand
 
 
 Estructura del proyecto
-├── actors\
-│   ├── Actor.ts\
-│   ├── Ball.ts\
-│   ├── Bar.ts\
-│   ├── Brick.ts\
-│   ├── BrickManager.ts\
-│   ├── FPSViewer.ts\
-├── assets\
-│   ├── img\
-│       ├── backgrounds\
-│       ├── readme\
-│       ├── sprites\
-│   ├── sounds\
-│   ├── utils\
-│       ├── Constants.ts\
-├── public\
-│   ├── css\
-│       ├── style.css\
-├── src\
-│   ├── script.ts\
-│   ├── index.html\
-├── docs (or build)\
-├── node_modules\
-├── package.json\
-├── package-lock.json\
-└── .gitignore\
+```
+├───📁 docs/
+│  
+├───📁 public/
+│   └───📄 style.css
+├───📁 src/
+│   ├───📁 actors/
+│   │   ├───📄 Actor.ts
+│   │   ├───📄 Background.ts
+│   │   ├───📄 Clicker.ts
+│   │   ├───📄 Dartboard.ts
+│   │   └───📄 FPSViewer.ts
+│   ├───📁 assets/
+│   │   ├───📄 background.png
+│   │   ├───📄 dartboard.png
+│   │   ├───📄 dartboardPIM.png
+│   │   ├───📄 fusi.png
+│   │   └───📄 gun.cur
+│   ├───📁 state/
+│   │   └───📄 DartBoardManager.ts
+│   ├───📁 types/
+│   │   └───📄 Point.ts
+│   └───📄 script.ts
+├───📄 .gitignore
+├───📄 index.d.ts
+├───📄 index.html
+├───📄 package-lock.json
+├───📄 package.json
+├───📄 README.md
 
+```
 
 Acceso directo al juego
 [Juega una partida pulsando aquí](https://www.google.com "PimPam ShootIt! Page")
