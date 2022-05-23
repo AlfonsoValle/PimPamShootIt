@@ -13,15 +13,15 @@
 >6. [Installation and deployment Guide.](#installation-and-deployment-guide)
 >7. [Code examples.](#code-examples)
 >8. [Other considerations:](#other-considerations)
-  >> 8.1 [About how I approached the project.](#about-how-i-approached-the-project)
+  >> - [About how I approached the project.](#about-how-i-approached-the-project)
   >
-  >> 8.2 [Difficulties.](#difficulties)
+  >> - [Difficulties.](#difficulties)
   >
-  >> 8.3 [Things I liked about this project.](#things-i-liked-about-this-project)
+  >> - [Things I liked about this project.](#things-i-liked-about-this-project)
   >
-  >> 8.4  [Bugs that I would have liked to fix.](#bugs-that-i-would-have-liked-to-fix)
+  >> -  [Bugs that I would have liked to fix.](#bugs-that-i-would-have-liked-to-fix)
   >
->> 8.5 [How could the game be improved](#how-could-the-game-be-improved)
+>> - [How could the game be improved](#how-could-the-game-be-improved)
 >9.  [Licenses.](#licenses)
   
 
@@ -84,7 +84,7 @@ I wanted to implement the detection of clicks on the screen to be able to shoot 
 ```
 
 ## **Shortcut to the game:**
-[Click here to play!](https://www.google.com "PimPam ShootIt! Page")
+[Click here to play!](https://alfonsovalle.github.io/PimPamShootIt/ "PimPam ShootIt! Page")
 
 ## **Installation and deployment Guide.**
 
