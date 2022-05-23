@@ -40,7 +40,8 @@
 ![Esta es una imagen](https://img.shields.io/badge/POWERED%20BY-CAFFEINE-orange?style=for-the-badge)
 
 ## **What is the game about?**
-[![Image](https://i.gyazo.com/2b7b95df291e0da9d4b9659f0398ad6a.gif)
+
+![](src\assets\pimpamgif.gif)
 
 Quite simple, break dartboards pushing click on the targets with the mouse, these will be generated and move randomly around the map, so that it is not too easy, there is a counter of shots and % of accuracy, which is the playfulness key of this project, the player can compete against himself or against others to overcome. 
 The targets stop once they are hit and their color changes to a clear and bright tone to make it clear to the player that he/she is done with them.
