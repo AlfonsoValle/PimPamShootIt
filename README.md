@@ -41,7 +41,7 @@
 
 ## **What is the game about?**
 
-![](https://i.gyazo.com/2b7b95df291e0da9d4b9659f0398ad6a.gif)
+![](https://media2.giphy.com/media/FFBi8Wfyf14kKQ2wjj/giphy.gif?cid=790b76117934104d20a1f5de81199d74381429cc4637c845&rid=giphy.gif&ct=g)
 
 Quite simple, break dartboards pushing click on the targets with the mouse, these will be generated and move randomly around the map, so that it is not too easy, there is a counter of shots and % of accuracy, which is the playfulness key of this project, the player can compete against himself or against others to overcome. 
 The targets stop once they are hit and their color changes to a clear and bright tone to make it clear to the player that he/she is done with them.
