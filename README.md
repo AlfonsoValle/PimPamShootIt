@@ -13,15 +13,16 @@
 >6. [Installation and deployment Guide.](#installation-and-deployment-guide)
 >7. [Code examples.](#code-examples)
 >8. [Other considerations:](#other-considerations)
-  >> - [About how I approached the project.](#about-how-i-approached-the-project)
-  >
-  >> - [Difficulties.](#difficulties)
-  >
-  >> - [Things I liked about this project.](#things-i-liked-about-this-project)
-  >
-  >> -  [Bugs that I would have liked to fix.](#bugs-that-i-would-have-liked-to-fix)
-  >
->> - [How could the game be improved](#how-could-the-game-be-improved)
+> - [About how I approached the project.](#about-how-i-approached-the-project)
+  
+  > - [Difficulties.](#difficulties)
+  
+  > - [Things I liked about this project.](#things-i-liked-about-this-project)
+  
+  > -  [Bugs that I would have liked to fix.](#bugs-that-i-would-have-liked-to-fix)
+  
+  > - [How could the game be improved](#how-could-the-game-be-improved)
+
 >9.  [Licenses.](#licenses)
   
 
