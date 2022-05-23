@@ -7,13 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "tsc",
-    "ghbuild":"vite build --outDir docs --base=/PimPamShootIt",
+    "ghbuild": "vite build --outDir docs --base=/PimPamShootIt",
     "preview": "vite preview --port 8080"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "sweetalert2": "^11.4.15",
     "typescript": "^4.6.4",
     "vite": "^2.9.9"
   },
